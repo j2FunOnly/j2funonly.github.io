@@ -1,5 +1,5 @@
 ---
-short_name: my short name
+short_name: me
 name: My name
 position: My position
 ---

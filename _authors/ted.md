@@ -1,5 +1,5 @@
 ---
-short_name: Ted's short name
+short_name: ted
 name: Ted's Name
 position: Ted's position
 ---
