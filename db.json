@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "title": "Post numba one",
+      "content": "Post numba one's text content"
+    },
+    {
+      "title": "Post numba two",
+      "content": "Post numba two's text content"
+    }
+  ],
+  "cars": [{
+      "make": "Toyota",
+      "model": "Celica",
+      "price": 35000
+    },
+    {
+      "make": "Ford",
+      "model": "Mondeo",
+      "price": 32000
+    },
+    {
+      "make": "Porsche",
+      "model": "Boxter",
+      "price": 72000
+    }
+  ]
+}
