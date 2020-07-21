@@ -1,6 +1,5 @@
 {
-  "posts": [
-    {
+  "posts": [{
       "title": "Post numba one",
       "content": "Post numba one's text content"
     },
@@ -24,5 +23,36 @@
       "model": "Boxter",
       "price": 72000
     }
-  ]
+  ],
+  "sample": [{
+    "aaa": "qwe1",
+    "status": "active",
+    "domain": null,
+    "click_date": "2020-07-07",
+    "summa": 5600
+  }, {
+    "aaa": "qwe2",
+    "status": "active",
+    "domain": null,
+    "click_date": "2020-07-07",
+    "summa": 500
+  }, {
+    "aaa": "qwe3",
+    "status": "active",
+    "domain": null,
+    "click_date": "2020-07-09",
+    "summa": 200
+  }, {
+    "aaa": "qwe2",
+    "status": "active",
+    "domain": null,
+    "click_date": "2020-07-10",
+    "summa": 720
+  }, {
+    "aaa": "qwe4",
+    "status": "active",
+    "domain": null,
+    "click_date": "2020-07-10",
+    "summa": 46
+  }]
 }
