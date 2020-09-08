@@ -54,5 +54,40 @@
     "domain": null,
     "click_date": "2020-07-10",
     "summa": 46
-  }]
+  }],
+  "products": {
+    "status": "ok",
+    "count": 5,
+    "products": [{
+        "id": 203848165,
+        "url": "/product/bottega-veneta",
+        "title": "Bottega Veneta",
+        "short_description": "мини-клатч The Pouch"
+      },
+      {
+        "id": 203942281,
+        "url": "/product/bugatti-tovarro",
+        "title": "Bugatti Tovarro",
+        "short_description": "моя личное название производителя"
+      },
+      {
+        "id": 203848009,
+        "url": "/product/fabio-bruno",
+        "title": "Fabio Bruno",
+        "short_description": "коньячная сумка-седло"
+      },
+      {
+        "id": 203848011,
+        "url": "/product/alex-santo",
+        "title": "Alex Santo",
+        "short_description": "коньячная alex-santo"
+      },
+      {
+        "id": 203848022,
+        "url": "/product/armani-tarasso",
+        "title": "Armani Tarasso",
+        "short_description": "лучшая armani-tarasso"
+      }
+    ]
+  }
 }
