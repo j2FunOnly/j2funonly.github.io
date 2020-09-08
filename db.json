@@ -1,3 +1,53 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<a href="#" class="letter">a</a>
+<a href="#" class="letter">b</a>
+<a href="#" class="letter">c</a>
+<a href="#" class="letter">d</a>
+<ul class="products"></ul>
+<script>
+  let data = {
+    products: []
+  };
+  
+  fetch('http://json.synapsepro.ru/products.json')
+    .then(response => response.json())
+    .then(json => data = json)
+    .catch(err => alert(err));
+ 
+  const renderProducts = products => {
+    const list = document.querySelector('ul.products');
+    const html = products.reduce((h, product) => {
+      return h += `<li>${product.title}</li>`
+    }, '');
+ 
+    list.innerHTML = html;
+  }
+ 
+  const filterProducts = letter => {
+    return data.products.filter(product => {
+      return product.title.toLowerCase().startsWith(letter);
+    });
+  }
+ 
+  const clickHandler = function(e) {
+    e.preventDefault();
+ 
+    const filteredProducts = filterProducts(this.textContent.trim());
+    renderProducts(filteredProducts);
+  }
+ 
+  document.querySelectorAll('a.letter').forEach(el => {
+    el.addEventListener('click', clickHandler);
+  });
+ 
+</script>
+</body>
+</html>
+
+
 {
   "posts": [{
       "title": "Post numba one",
@@ -55,39 +105,35 @@
     "click_date": "2020-07-10",
     "summa": 46
   }],
-  "products": {
-    "status": "ok",
-    "count": 5,
-    "products": [{
-        "id": 203848165,
-        "url": "/product/bottega-veneta",
-        "title": "Bottega Veneta",
-        "short_description": "мини-клатч The Pouch"
-      },
-      {
-        "id": 203942281,
-        "url": "/product/bugatti-tovarro",
-        "title": "Bugatti Tovarro",
-        "short_description": "моя личное название производителя"
-      },
-      {
-        "id": 203848009,
-        "url": "/product/fabio-bruno",
-        "title": "Fabio Bruno",
-        "short_description": "коньячная сумка-седло"
-      },
-      {
-        "id": 203848011,
-        "url": "/product/alex-santo",
-        "title": "Alex Santo",
-        "short_description": "коньячная alex-santo"
-      },
-      {
-        "id": 203848022,
-        "url": "/product/armani-tarasso",
-        "title": "Armani Tarasso",
-        "short_description": "лучшая armani-tarasso"
-      }
-    ]
-  }
+  "products": [{
+      "id": 203848165,
+      "url": "/product/bottega-veneta",
+      "title": "Bottega Veneta",
+      "short_description": "мини-клатч The Pouch"
+    },
+    {
+      "id": 203942281,
+      "url": "/product/bugatti-tovarro",
+      "title": "Bugatti Tovarro",
+      "short_description": "моя личное название производителя"
+    },
+    {
+      "id": 203848009,
+      "url": "/product/fabio-bruno",
+      "title": "Fabio Bruno",
+      "short_description": "коньячная сумка-седло"
+    },
+    {
+      "id": 203848011,
+      "url": "/product/alex-santo",
+      "title": "Alex Santo",
+      "short_description": "коньячная alex-santo"
+    },
+    {
+      "id": 203848022,
+      "url": "/product/armani-tarasso",
+      "title": "Armani Tarasso",
+      "short_description": "лучшая armani-tarasso"
+    }
+  ]
 }
